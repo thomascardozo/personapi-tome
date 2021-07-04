@@ -5,6 +5,7 @@ import one.digitalinnovation.personapi.entities.Person;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 
+//Faz as conversões de model para dto e vice versa.
 @Mapper(componentModel = "spring")
 public interface PersonMapper {
 
