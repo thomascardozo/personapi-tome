@@ -18,14 +18,14 @@ import java.util.stream.Collectors;
 public class PersonService {
 
     private final PersonRepository personRepository;
-
     private final PersonMapper personMapper;
 
     public MessageResponseDTO create(PersonDTO personDTO) {
         Person person = personMapper.toModel(personDTO);
         Person savedPerson = personRepository.save(person);
 
-        MessageResponseDTO messageResponse = createMessageResponse("Person successfully created with ID ", savedPerson.getId());
+        MessageResponseDTO messageResponse = createMessageResponse(savedPerson.getId(),
+                "Created person with ID: ");
 
         return messageResponse;
     }
@@ -43,13 +43,13 @@ public class PersonService {
     }
 
     public MessageResponseDTO update(Long id, PersonDTO personDTO) throws PersonNotFoundException {
-        personRepository.findById(id)
-                .orElseThrow(() -> new PersonNotFoundException(id));
+        verifyIfExists(id);
 
         Person updatedPerson = personMapper.toModel(personDTO);
         Person savedPerson = personRepository.save(updatedPerson);
 
-        MessageResponseDTO messageResponse = createMessageResponse("Person successfully updated with ID ", savedPerson.getId());
+        MessageResponseDTO messageResponse = createMessageResponse(savedPerson.getId(),
+                "Updated person with ID: ");
 
         return messageResponse;
     }
@@ -64,9 +64,10 @@ public class PersonService {
                 .orElseThrow(() -> new PersonNotFoundException(id));
     }
 
-    private MessageResponseDTO createMessageResponse(String s, Long id2) {
-        return MessageResponseDTO.builder()
-                .message(s + id2)
+    private MessageResponseDTO createMessageResponse(Long id, String message) {
+        return MessageResponseDTO
+                .builder()
+                .message(message + id)
                 .build();
     }
 }
