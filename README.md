@@ -16,7 +16,7 @@ Inclusões ao Projeto Original:
 * Entidade 'CAR' vinculada a entidade mãe 'PERSON';
 * Entidade 'PET' vinculada a entidade mãe 'PERSON';
 * Inserção do Swagger ao projeto;
-* Disponível para observação e testes em https://personapi-tome.herokuapp.com/swagger-ui.html
+* Disponível para observação e testes em <a href="https://personapi-tome.herokuapp.com/swagger-ui.html" target="_blank">personapi-tome.herokuapp.com/swagger-ui.html</a>
 
 Para executar o projeto no terminal, digite o seguinte comando:
 
