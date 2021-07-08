@@ -42,4 +42,8 @@ public class PersonDTO {
     @Valid
     @NotEmpty
     private List<CarDTO> cars;
+
+    @Valid
+    @NotEmpty
+    private List<PetDTO> pets;
 }
