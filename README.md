@@ -1,7 +1,5 @@
 <h2>Digital Innovation: acompanhamento da aula do Prof. Rodrigo Peleias no desenvolvimento de um sistema de gerenciamento de pessoas em API REST com Spring Boot</h2>
 
-=> Sistema para o gerenciamento de pessoas através de uma API REST, criada com Spring Boot.
-
 Tópicos observados:
 
 * Setup inicial de projeto com o Spring Boot Initialzr 
