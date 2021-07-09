@@ -33,7 +33,7 @@ public class SwaggerConfig {
                 "Sistema para o gerenciamento de pessoas através de uma API REST, criada com Spring Boot",
                 "1.0",
                 "Terms of Service",
-                new Contact("Tomeh Cardoso", "https://github.com/thomascardozo",
+                new Contact("Tomeh Cardoso", "https://github.com/thomascardozo/personapi-tome",
                         "thomas.cardozo@gmail.com"),
                 "Apache License Version 2.0",
                 "https://www.apache.org/licesen.html", new ArrayList<VendorExtension>()
